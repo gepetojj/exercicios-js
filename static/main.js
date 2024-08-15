@@ -58,3 +58,34 @@ function ordem(event) {
 	const ordem = [num1, num2, num3].sort((a, b) => a - b);
 	document.getElementById("q4-ordem").innerHTML = `${ordem.join(", ")}`;
 }
+
+function positivo_negativo(event) {
+	event.preventDefault();
+
+	const num = Number(event.target[0].value);
+
+	if (num > 0) {
+		document.getElementById("q5-positivo").innerHTML = "Positivo";
+		document.getElementById("q5-positivo").style.color = "green";
+	} else if (num < 0) {
+		document.getElementById("q5-positivo").innerHTML = "Negativo";
+		document.getElementById("q5-positivo").style.color = "red";
+	} else {
+		document.getElementById("q5-positivo").innerHTML = "Neutro";
+		document.getElementById("q5-positivo").style.color = "gray";
+	}
+}
+
+function par_impar(event) {
+	event.preventDefault();
+
+	const num = Number(event.target[0].value);
+
+	if (num % 2 === 0) {
+		document.getElementById("q6-par").innerHTML = "Par";
+		document.getElementById("q6-par").style.color = "green";
+	} else {
+		document.getElementById("q6-par").innerHTML = "Ímpar";
+		document.getElementById("q6-par").style.color = "red";
+	}
+}
