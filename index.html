@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>INTRODUÇÃO ÀS TECNOLOGIAS WEB</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="./static/main.js"></script>
+	</head>
+	<body class="flex flex-col w-screen bg-[#fafbfc] p-10 gap-10">
+		<div class="flex flex-col w-full gap-4">
+			<h2 class="text-lg font-medium">Questão 1</h2>
+			<div>
+				<h3>Entrada: 5 números inteiros</h3>
+				<h3>Saída: Número maior e menor dos 5 inseridos</h3>
+			</div>
+			<form class="flex flex-col gap-1" action="#" method="get" onsubmit="maior_menor(event)">
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q1-int-1" class="text-sm font-light">Digite um número inteiro:</label>
+					<input
+						id="q1-int-1"
+						type="number"
+						step="1"
+						placeholder="Digite o número 1"
+						class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q1-int-2" class="text-sm font-light">Digite um número inteiro:</label>
+					<input
+						id="q1-int-2"
+						type="number"
+						step="1"
+						placeholder="Digite o número 2"
+						class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q1-int-3" class="text-sm font-light">Digite um número inteiro:</label>
+					<input
+						id="q1-int-3"
+						type="number"
+						step="1"
+						placeholder="Digite o número 3"
+						class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q1-int-4" class="text-sm font-light">Digite um número inteiro:</label>
+					<input
+						id="q1-int-4"
+						type="number"
+						step="1"
+						placeholder="Digite o número 4"
+						class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q1-int-5" class="text-sm font-light">Digite um número inteiro:</label>
+					<input
+						id="q1-int-5"
+						type="number"
+						step="1"
+						placeholder="Digite o número 5"
+						class="px-2 py-1 rounded-md" />
+				</div>
+				<input
+					type="submit"
+					value="Calcular"
+					class="max-w-[20rem] bg-blue-400 p-2 rounded-md cursor-pointer mt-2" />
+			</form>
+			<div>
+				<h4>Maior: <span id="q1-maior"></span></h4>
+				<h4>Menor: <span id="q1-menor"></span></h4>
+			</div>
+		</div>
+
+		<div class="flex flex-col w-full gap-4">
+			<h2 class="text-lg font-medium">Questão 2</h2>
+			<div>
+				<h3>Entrada: 1 caractere</h3>
+				<h3>Saída: Se o caractere é vogal ou não</h3>
+			</div>
+			<form class="flex flex-col gap-1" action="#" method="get" onsubmit="vogal(event)">
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q2-char" class="text-sm font-light">Digite um caractere:</label>
+					<input
+						id="q2-char"
+						type="text"
+						minlength="1"
+						maxlength="1"
+						placeholder="Digite o caractere"
+						class="px-2 py-1 rounded-md" />
+				</div>
+				<input
+					type="submit"
+					value="Calcular"
+					class="max-w-[20rem] bg-blue-400 p-2 rounded-md cursor-pointer mt-2" />
+			</form>
+			<div>
+				<h4>É vogal: <span id="q2-vogal"></span></h4>
+			</div>
+		</div>
+
+		<div class="flex flex-col w-full gap-4">
+			<h2 class="text-lg font-medium">Questão 3</h2>
+			<div>
+				<h3>Entrada: 2 números representando um limite crescente</h3>
+				<h3>Saída: Todos os números pares e a soma deles dentro do limite</h3>
+			</div>
+			<form class="flex flex-col gap-1" action="#" method="get" onsubmit="limites(event)">
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q3-lim1" class="text-sm font-light">Digite o limite menor:</label>
+					<input id="q3-lim1" type="number" step="1" placeholder="Digite" class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q3-lim2" class="text-sm font-light">Digite o limite maior:</label>
+					<input id="q3-lim2" type="number" step="1" placeholder="Digite" class="px-2 py-1 rounded-md" />
+				</div>
+				<input
+					type="submit"
+					value="Calcular"
+					class="max-w-[20rem] bg-blue-400 p-2 rounded-md cursor-pointer mt-2" />
+			</form>
+			<div>
+				<h4>Números pares: <span id="q3-pares"></span></h4>
+				<h4>Soma: <span id="q3-sum"></span></h4>
+			</div>
+		</div>
+
+		<div class="flex flex-col w-full gap-4">
+			<h2 class="text-lg font-medium">Questão 4</h2>
+			<div>
+				<h3>Entrada: 3 números inteiros</h3>
+				<h3>Saída: Os 3 números ordenados em ordem crescente</h3>
+			</div>
+			<form class="flex flex-col gap-1" action="#" method="get" onsubmit="ordem(event)">
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q4-num1" class="text-sm font-light">Digite o número 1:</label>
+					<input id="q4-num1" type="number" step="1" placeholder="Digite" class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q4-num2" class="text-sm font-light">Digite o número 2:</label>
+					<input id="q4-num2" type="number" step="1" placeholder="Digite" class="px-2 py-1 rounded-md" />
+				</div>
+				<div class="flex flex-col max-w-[20rem]">
+					<label for="q4-num3" class="text-sm font-light">Digite o número 3:</label>
+					<input id="q4-num3" type="number" step="1" placeholder="Digite" class="px-2 py-1 rounded-md" />
+				</div>
+				<input
+					type="submit"
+					value="Calcular"
+					class="max-w-[20rem] bg-blue-400 p-2 rounded-md cursor-pointer mt-2" />
+			</form>
+			<div>
+				<h4>Ordem: <span id="q4-ordem"></span></h4>
+			</div>
+		</div>
+	</body>
+</html>
